@@ -17,8 +17,8 @@ class DatabaseConnection:
                 """
                 CREATE TABLE user (
                     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                    name varchar(50),
-                    age int
+                    name VARCHAR(50),
+                    age INT
                     )
                     """
             )
