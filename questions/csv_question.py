@@ -43,7 +43,6 @@ class Controller:
             print(e)
             return e
 
-
     def get(self, obj_id: int):
         """Function to retrieve a record"""
         try:
@@ -58,10 +57,10 @@ class Controller:
 
                     # iterate through the rows
                     for line in reader:
-    
                         # check if item is in the row and return the record
                         if obj_id in line:
-                            message = "String found in the following record{}".format(line)
+                            message = "String found in the" \
+                                "following record{}".format(line)
                             print(line)
                             return message
 
