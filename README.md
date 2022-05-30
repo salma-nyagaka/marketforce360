@@ -17,6 +17,19 @@ Simple functions to save and retrieve data from CSV file and Sqlite database
     git clone https://github.com/salma-nyagaka/marketforce360.git
     ```
 
+-   Create a virtual environment and activate it:
+
+    ```
+    virtualenv venv
+    source venv/bin/activate
+    ```
+
+-   Install the dependencies:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
 -   Run the tests:
 
     ```
