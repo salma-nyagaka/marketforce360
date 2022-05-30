@@ -37,7 +37,7 @@ Simple functions to save and retrieve data from CSV file and Sqlite database
     ```
 
 
-- cd into questions and create the database
+- cd into the questions directory and create the database
 
     ```
     python3 database.py
