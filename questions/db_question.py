@@ -15,7 +15,9 @@ class Controller:
     def get(self, obj_id: int):
         """Retrieves a record based on user obj_id"""
         records = DatabaseConnection().retrieve(obj_id)
-        return records
+
+        data =  {"status": "success", "data": records}
+        return data
 
 
 name = "Wanyoike"

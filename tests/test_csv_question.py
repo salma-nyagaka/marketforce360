@@ -29,6 +29,6 @@ def test_retrieve_from_csv_file():
 
     save_data()
     operations = Controller()
-    record = operations.get("Ian")
-    message = "String found in the following record['1', 'Ian', '32']"
-    assert message == record
+    record = operations.get("1")
+    status = "success"
+    assert status == record['status']
