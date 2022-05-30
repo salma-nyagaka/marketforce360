@@ -24,7 +24,7 @@ class Controller:
 
                 # creating a csv dict writer object
                 writer = csv.DictWriter(csvfile, fieldnames=fields)
-                message = "successfully added the info"
+                message = "Successfully added the new record"
 
                 if is_empty:
 
@@ -60,7 +60,11 @@ class Controller:
                         # check if item is in the row and return the record
                         line_values = int(line[0])
                         if obj_id == line_values:
-                            data = {"status": "success", "data": line}
+                            data = {
+                                "status": "success",
+                                "message": "Record fetched successfully",
+                                "data": line,
+                            }
                             print(data)
                             return data
 

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import sys
+
 sys.path.append(".")
 
 from database import DatabaseConnection
@@ -16,7 +17,12 @@ class Controller:
         """Retrieves a record based on user obj_id"""
         records = DatabaseConnection().retrieve(obj_id)
 
-        data =  {"status": "success", "data": records}
+        data = {
+            "status": "success",
+            "message": "Record fetched successfully",
+            "data": records,
+        }
+        print(data)
         return data
 
 
