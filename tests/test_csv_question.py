@@ -29,6 +29,6 @@ def test_retrieve_from_csv_file():
 
     save_data()
     operations = Controller()
-    record = operations.get("1")
+    record = operations.get(1)
     status = "success"
     assert status == record['status']

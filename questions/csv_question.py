@@ -18,7 +18,7 @@ class Controller:
 
         try:
             # writing to csv file
-            with open("data.csv", "a") as csvfile:
+            with open("data.csv", "a", encoding="UTF8") as csvfile:
                 # check if file is empty
                 is_empty = os.stat("data.csv").st_size == 0
 
@@ -54,13 +54,13 @@ class Controller:
                     return message
                 else:
                     reader = csv.reader(f_obj, delimiter=",")
-
+                    next(reader)
                     # iterate through the rows
                     for line in reader:
                         # check if item is in the row and return the record
-                        if obj_id in line:
-                            data =  {"status": "success", "data": line}
-
+                        line_values = int(line[0])
+                        if obj_id == line_values:
+                            data = {"status": "success", "data": line}
                             print(data)
                             return data
 
