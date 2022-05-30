@@ -37,12 +37,17 @@ Simple functions to save and retrieve data from CSV file and Sqlite database
     ```
 
 
-- cd into the questions directory and create the database
+- Create the database
 
     ```
-    python3 database.py
+    python3 questions/database.py
     ```
 
--   Run the files to view the functionalities.
+-   Run the following commands to view the functionalities.
+    ```
+    python3 questions/csv_question.py
+    ```
 
-   
+    ```
+    python3 questions/db_question.py
+    ```
