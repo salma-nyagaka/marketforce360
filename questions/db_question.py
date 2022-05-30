@@ -1,26 +1,26 @@
 #!/usr/bin/python
-
 import sys
-sys.path.append(".") 
+sys.path.append(".")
 
 from database import DatabaseConnection
-from collections import namedtuple
+
 
 class Controller:
     def create(self, name: str, age: int):
-        """ Creates a new record """
+        """Creates a new record"""
 
         records = DatabaseConnection().insert_to(name, age)
         return records
 
     def get(self, obj_id: int):
-        """ Retrieves a record based on user obj_id """
+        """Retrieves a record based on user obj_id"""
         records = DatabaseConnection().retrieve(obj_id)
-        return records
+
+        data =  {"status": "success", "data": records}
+        return data
 
 
-
-name = 'Wanyoike'
+name = "Wanyoike"
 age = 32
 search_params = 1
 operations = Controller()
