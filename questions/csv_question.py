@@ -59,8 +59,9 @@ class Controller:
                     for line in reader:
                         # check if item is in the row and return the record
                         if obj_id in line:
-                            message = "String found in the" \
-                                "following record{}".format(line)
+                            message = "String found in the following record{}".format(
+                                line
+                            )
                             print(line)
                             return message
 
